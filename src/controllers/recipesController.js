@@ -1,10 +1,8 @@
-import { mockRecipes } from '../../mocks/recipes.mock.js';
 import initDB from '../database/db.js';
 
 class RecipesController {
   async getRecipes(req, res) {
     try {
-      // const recipes = await mockRecipes;
       const db = await initDB();
       const recipes = await db.all('SELECT * FROM recipes');
       res.status(200).json(recipes);
