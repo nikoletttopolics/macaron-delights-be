@@ -1,4 +1,3 @@
-import { mockWebshopItems } from '../../mocks/webshop.mock.js';
 import initDB from '../database/db.js';
 
 class WebshopController {
